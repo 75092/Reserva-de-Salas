@@ -1,109 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centro de Conhecimento, Investigação e Inovação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #fdf6e3, #e6ffe6, #fff0f0);
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #006400;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-        }
-        nav {
-            background-color: #ffcc00;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #b30000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .calendar-container {
-            padding: 20px;
-            overflow-x: auto;
-        }
-        table.calendar {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        table.calendar th,
-        table.calendar td {
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 10px;
-            min-width: 120px;
-        }
-        table.calendar th {
-            background-color: #f44336;
-            color: white;
-        }
-        footer {
-            background-color: #eeeeee;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        footer img {
-            max-height: 40px;
-            margin-bottom: 10px;
-        }
-        footer p {
-            font-size: 12px;
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Conhecimento, Investigação e Inovação</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d4f5e7, #fff8cc, #ffd6d6);
+      background-size: 300% 300%;
+      animation: gradientFlow 20s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #006400;
+    }
+
+    .calendar-container {
+      padding: 2rem;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 700px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f44336;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    footer img {
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: #333;
+      margin: 0.2rem 0;
+    }
+  </style>
 </head>
 <body>
-    <header>Centro de Conhecimento, Investigação e Inovação</header>
+  <header>
+    <h1>Centro de Conhecimento, Investigação e Inovação</h1>
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Formações</a>
-        <a href="#">Salas</a>
-        <a href="#">Contactos</a>
+      <a href="#">Início</a>
+      <a href="#">Formações</a>
+      <a href="#">Calendário</a>
+      <a href="#">Salas</a>
+      <a href="#">Contactos</a>
     </nav>
-    <div class="calendar-container">
-        <table class="calendar">
-            <tr>
-                <th>Hora</th>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-            </tr>
-            <tr><td>08:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>09:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>11:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>12:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>14:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>15:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-        </table>
-    </div>
-    <footer>
-        <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
-        <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)<br/>
-        HOSPITAL GARCIA DE ORTA (HGO)<br/>
-        Av. Torrado da Silva<br/>
-        2805-267 Almada | PORTUGAL<br/>
-        Tel.: +351 212 727 360<br/>
-        www.hgo.min-saude.pt</p>
-    </footer>
+  </header>
+
+  <main class="calendar-container">
+    <table>
+      <tr>
+        <th>Hora</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+<tr><td>08:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>09:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>11:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>12:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>14:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>15:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+  </main>
+
+  <footer>
+    <img src="ulsas_logotipo.png" alt="ULSAS Logotipo" />
+    <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)</p>
+    <p>HOSPITAL GARCIA DE ORTA (HGO)</p>
+    <p>Av. Torrado da Silva</p>
+    <p>2805-267 Almada | PORTUGAL</p>
+    <p>Tel.: +351 212 727 360</p>
+    <p><a href="https://www.hgo.min-saude.pt">www.hgo.min-saude.pt</a></p>
+  </footer>
 </body>
 </html>
