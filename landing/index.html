@@ -2,52 +2,49 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Centro de Conhecimento, Investigação e Inovação</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #d4f5e7, #fff8cc, #ffd6d6);
-      background-size: 300% 300%;
-      animation: gradientFlow 20s ease infinite;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: url('fundo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
     }
 
-    @keyframes gradientFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 100%;
+      padding-bottom: 60px;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(6px);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      background: transparent;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: #333;
+    nav {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: rgba(0, 0, 0, 0.3);
     }
 
     nav a {
-      margin: 0 1rem;
+      color: white;
       text-decoration: none;
-      color: #333;
+      margin: 0 1.2rem;
       font-weight: bold;
-      transition: color 0.3s ease;
+      font-size: 1rem;
     }
 
     nav a:hover {
-      color: #006400;
+      text-decoration: underline;
     }
 
     .calendar-container {
@@ -59,40 +56,40 @@
       border-collapse: collapse;
       width: 100%;
       min-width: 700px;
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     th, td {
       border: 1px solid #ccc;
       text-align: center;
       padding: 10px;
+      color: white;
     }
 
     th {
-      background-color: #f44336;
-      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem 1rem 0.5rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      font-size: 0.75rem;
     }
 
     footer img {
-      height: 50px;
-      margin-bottom: 1rem;
+      height: 40px;
+      margin-bottom: 0.5rem;
     }
 
     footer p {
-      font-size: 0.85rem;
-      color: #333;
       margin: 0.2rem 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Centro de Conhecimento, Investigação e Inovação</h1>
+  <div class="overlay">
+    <header>Centro de Conhecimento, Investigação e Inovação</header>
     <nav>
       <a href="#">Início</a>
       <a href="#">Formações</a>
@@ -100,18 +97,17 @@
       <a href="#">Salas</a>
       <a href="#">Contactos</a>
     </nav>
-  </header>
 
-  <main class="calendar-container">
-    <table>
-      <tr>
-        <th>Hora</th>
-        <th>Segunda</th>
-        <th>Terça</th>
-        <th>Quarta</th>
-        <th>Quinta</th>
-        <th>Sexta</th>
-      </tr>
+    <main class="calendar-container">
+      <table>
+        <tr>
+          <th>Hora</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+        </tr>
 <tr><td>08:00</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>09:00</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -122,17 +118,18 @@
 <tr><td>15:00</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
-    </table>
-  </main>
+      </table>
+    </main>
 
-  <footer>
-    <img src="ulsas_logotipo.png" alt="ULSAS Logotipo" />
-    <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)</p>
-    <p>HOSPITAL GARCIA DE ORTA (HGO)</p>
-    <p>Av. Torrado da Silva</p>
-    <p>2805-267 Almada | PORTUGAL</p>
-    <p>Tel.: +351 212 727 360</p>
-    <p><a href="https://www.hgo.min-saude.pt">www.hgo.min-saude.pt</a></p>
-  </footer>
+    <footer>
+      <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
+      <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)</p>
+      <p>HOSPITAL GARCIA DE ORTA (HGO)</p>
+      <p>Av. Torrado da Silva</p>
+      <p>2805-267 Almada | PORTUGAL</p>
+      <p>Tel.: +351 212 727 360</p>
+      <p><a href="https://www.hgo.min-saude.pt" style="color: #fff;">www.hgo.min-saude.pt</a></p>
+    </footer>
+  </div>
 </body>
 </html>
