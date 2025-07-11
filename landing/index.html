@@ -2,44 +2,108 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Conhecimento, Investigação e Inovação</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #fdf6e3, #e6ffe6, #fff0f0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #b30000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .calendar-container {
+            padding: 20px;
+            overflow-x: auto;
+        }
+        table.calendar {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.calendar th,
+        table.calendar td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+            min-width: 120px;
+        }
+        table.calendar th {
+            background-color: #f44336;
+            color: white;
+        }
+        footer {
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer img {
+            max-height: 40px;
+            margin-bottom: 10px;
+        }
+        footer p {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Centro de Conhecimento, Investigação e Inovação</h1>
-        <nav>
-            <ul class="navbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Formações</a></li>
-                <li><a href="#">Calendário</a></li>
-                <li><a href="#">Contactos</a></li>
-                <li><a href="#">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h2>Bem-vindo ao futuro da formação!</h2>
-            <p>Explore as nossas salas, agende formações e participe em eventos.</p>
-            <button>Explorar Formações</button>
-        </section>
-    </main>
-
+    <header>Centro de Conhecimento, Investigação e Inovação</header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Formações</a>
+        <a href="#">Salas</a>
+        <a href="#">Contactos</a>
+    </nav>
+    <div class="calendar-container">
+        <table class="calendar">
+            <tr>
+                <th>Hora</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+            </tr>
+            <tr><td>08:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>09:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>11:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>12:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>14:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>15:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
     <footer>
-        <img src="img/ulsas_logotipo.png" alt="Logotipo ULSAS" class="footer-logo">
-        <p>
-            UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)<br>
-            HOSPITAL GARCIA DE ORTA (HGO)<br>
-            Av. Torrado da Silva<br>
-            2805-267 Almada | PORTUGAL<br>
-            Tel.: +351 212 727 360<br>
-            <a href="https://www.hgo.min-saude.pt" target="_blank">www.hgo.min-saude.pt</a>
-        </p>
+        <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
+        <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)<br/>
+        HOSPITAL GARCIA DE ORTA (HGO)<br/>
+        Av. Torrado da Silva<br/>
+        2805-267 Almada | PORTUGAL<br/>
+        Tel.: +351 212 727 360<br/>
+        www.hgo.min-saude.pt</p>
     </footer>
 </body>
 </html>
