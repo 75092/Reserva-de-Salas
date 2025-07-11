@@ -1,53 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Painel do Administrador - Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-yellow-50 min-h-screen flex text-gray-800">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Conhecimento, Investigação e Inovação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Centro de Conhecimento, Investigação e Inovação</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Formações</a></li>
+                <li><a href="#">Calendário</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-green-800 text-white flex flex-col">
-      <div class="p-6 text-2xl font-bold border-b border-green-700">
-        Admin CCII
-      </div>
-      <nav class="flex-grow p-4 space-y-2 text-sm">
-        <a href="index.html" class="block py-2 px-4 rounded bg-green-700">🏠 Home</a>
-        <a href="calendario.html" class="block py-2 px-4 rounded hover:bg-green-700">📅 Calendário</a>
-        <a href="mapa.html" class="block py-2 px-4 rounded hover:bg-green-700">🗺️ Mapa de Salas</a>
-        <a href="formacoes.html" class="block py-2 px-4 rounded hover:bg-green-700">📚 Formações</a>
-        <a href="participantes.html" class="block py-2 px-4 rounded hover:bg-green-700">👥 Participantes</a>
-        <a href="admin.html" class="block py-2 px-4 rounded hover:bg-green-700">⚙️ Admin</a>
-      </nav>
-      <div class="p-4 border-t border-green-700 text-xs text-center">
-        © 2025 CCII
-      </div>
-    </aside>
-
-    <!-- Conteúdo principal -->
-    <main class="flex-grow p-10 relative">
-      <!-- Botão Logoff -->
-      <div class="absolute top-4 right-4">
-        <a href="../login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-bold text-sm">
-          🚪 Terminar Sessão
-        </a>
-      </div>
-
-      <h1 class="text-3xl font-bold mb-4 text-green-800">📅 Próximos Eventos</h1>
-      <ul class="space-y-2 mb-8">
-        <li class="bg-white shadow-md p-4 rounded border-l-4 border-green-600">
-          <strong>Formação Excel Avançado</strong> - 15/07/2025 às 10:00
-        </li>
-        <li class="bg-white shadow-md p-4 rounded border-l-4 border-green-600">
-          <strong>Workshop de Inovação</strong> - 20/07/2025 às 14:00
-        </li>
-      </ul>
-
-      <a href="formacoes.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-        ➕ Agendar Formação
-      </a>
+    <main>
+        <section class="hero">
+            <h2>Bem-vindo ao futuro da formação!</h2>
+            <p>Explore as nossas salas, agende formações e participe em eventos.</p>
+            <button>Explorar Formações</button>
+        </section>
     </main>
-  </body>
+
+    <footer>
+        <img src="img/ulsas_logotipo.png" alt="Logotipo ULSAS" class="footer-logo">
+        <p>
+            UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)<br>
+            HOSPITAL GARCIA DE ORTA (HGO)<br>
+            Av. Torrado da Silva<br>
+            2805-267 Almada | PORTUGAL<br>
+            Tel.: +351 212 727 360<br>
+            <a href="https://www.hgo.min-saude.pt" target="_blank">www.hgo.min-saude.pt</a>
+        </p>
+    </footer>
+</body>
 </html>
