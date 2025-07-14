@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCII - PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4caf50" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <header>Centro de Conhecimento, Investigação e Inovação</header>
+    <nav>
+      <a href="index.html">Início</a>
+    </nav>
+    <main class="calendar-container">
+      <p>Bem-vindo à app CCII!</p>
+      <p>Instale esta aplicação no seu dispositivo para aceder mais facilmente.</p>
+    </main>
+    <footer>
+      <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
+      <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)</p>
+      <p>www.hgo.min-saude.pt</p>
+    </footer>
+  </div>
+</body>
+</html>

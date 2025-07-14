@@ -1,0 +1,21 @@
+{
+  "name": "Centro de Conhecimento, Investiga\u00e7\u00e3o e Inova\u00e7\u00e3o",
+  "short_name": "CCII",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4caf50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "ulsas_icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ulsas_icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
