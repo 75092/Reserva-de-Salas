@@ -1,3 +1,0 @@
-# Projeto Reserva de Salas
-
-Instruções em breve...
