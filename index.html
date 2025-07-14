@@ -9,12 +9,47 @@
   <meta name="theme-color" content="#4caf50" />
   <link rel="stylesheet" href="style.css" />
   <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      document.getElementById('installBtn').style.display = 'block';
+    });
+
+    function instalarApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('App instalada com sucesso!');
+          } else {
+            console.log('Instalação recusada.');
+          }
+          deferredPrompt = null;
+          document.getElementById('installBtn').style.display = 'none';
+        });
+      }
+    }
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js');
       });
     }
   </script>
+  <style>
+    #installBtn {
+      display: none;
+      margin: 1rem auto;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay">
@@ -25,6 +60,7 @@
     <main class="calendar-container">
       <p>Bem-vindo à app CCII!</p>
       <p>Instale esta aplicação no seu dispositivo para aceder mais facilmente.</p>
+      <button id="installBtn" onclick="instalarApp()">📲 Instalar esta aplicação</button>
     </main>
     <footer>
       <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
