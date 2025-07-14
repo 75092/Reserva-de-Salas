@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamentos Offline</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fullcalendar.min.css" />
+  <meta name="theme-color" content="#4caf50" />
+</head>
+<body>
+  <div class="overlay">
+    <header>Centro de Conhecimento, Investigação e Inovação</header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="agendamentos.html">Agendamentos</a>
+    </nav>
+    <main>
+      <button class="btn-agendar" onclick="abrirModal()">+ Novo Agendamento</button>
+      <div id="calendar"></div>
+    </main>
+    <footer>
+      <img src="ulsas_logotipo.png" alt="Logotipo ULSAS" />
+      <p>UNIDADE LOCAL DE SAÚDE DE ALMADA-SEIXAL (ULSAS)</p>
+      <p>www.hgo.min-saude.pt</p>
+    </footer>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <h2>Novo Agendamento</h2>
+        <form id="form-agendamento">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" required />
+          <label for="sala">Sala:</label>
+          <select id="sala" required>
+            <option value="">-- Selecione --</option>
+            <option value="Almada">Almada</option>
+            <option value="Garcia de Orta">Garcia de Orta</option>
+          </select>
+          <label for="data">Data e hora de início:</label>
+          <input type="datetime-local" id="data" required />
+          <label for="duracao">Duração (em horas):</label>
+          <input type="number" id="duracao" min="1" max="8" required />
+          <button type="submit">Agendar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+  <script src="fullcalendar.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
